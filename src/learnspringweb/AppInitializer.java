@@ -4,13 +4,13 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 public class AppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
-	@Override
+//	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		// TODO Auto-generated method stub
 		return new Class<?>[] { RootConfig.class };
 	}
 
-	@Override
+//	@Override
 	protected Class<?>[] getServletConfigClasses() {
 		// TODO Auto-generated method stub
 		return new Class<?>[] { WebConfig.class };

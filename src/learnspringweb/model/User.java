@@ -1,11 +1,14 @@
 package learnspringweb.model;
 
-import com.sun.istack.internal.NotNull;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 public class User {
 	@NotNull
+	@Size(min=6,max=12)
 	private String userName;
 	@NotNull
+	@Size(min=6,max=12)
 	private String pwd;
 
 	public String getUserName() {
