@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Insert title here</title>
+<title>第一个spring</title>
 </head>
 <body>
-666123
+第一个spring第一个spring第一个spring第一个spring第一个spring的<br>
+${key }
 </body>
 </html>
