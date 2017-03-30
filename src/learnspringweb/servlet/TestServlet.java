@@ -1,4 +1,4 @@
-package servlet;
+package learnspringweb.servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
