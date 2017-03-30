@@ -3,6 +3,9 @@ package learnspringweb.model;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class User {
 	@NotNull
 	@Size(min=6,max=12)

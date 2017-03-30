@@ -9,6 +9,10 @@ import learnspringweb.model.User;
 
 import static org.springframework.web.bind.annotation.RequestMethod.*;
 
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServletResponse;
+
 @Controller
 @RequestMapping("/user")
 public class RegistConreoller {
@@ -20,10 +24,12 @@ public class RegistConreoller {
 	
 	
 	@RequestMapping(value="/regist", method=POST)
-	public String registAct(@Validated User u, Errors e){
-		if(e.hasErrors())
-			System.out.println("eeeee");
+	public void registAct(@Validated User u, Errors e,PrintWriter out){
 		System.out.println(u.toString());
-		return "redirect:";
+		if(e.hasErrors())
+			out.print("eee");     
+		else
+			out.print("666");
+		
 	}
 }
