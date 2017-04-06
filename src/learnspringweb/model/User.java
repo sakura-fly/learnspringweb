@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class User {
 	@NotNull
-	@Size(min=6,max=12)
+	@Size(min=2,max=12)
 	private String userName;
 	@NotNull
 	@Size(min=6,max=12)
