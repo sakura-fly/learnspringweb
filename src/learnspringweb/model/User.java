@@ -5,6 +5,8 @@ import javax.validation.constraints.Size;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import net.sf.json.JSONObject;
+
 @Document
 public class User {
 	@NotNull
@@ -32,8 +34,17 @@ public class User {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return "userName=" + userName + ",pwd=" + pwd;
+		JSONObject json = new JSONObject();
+		json.put("userName", userName);
+		json.put("pwd", pwd);
+		return json.toString();
+	}
+	
+	public JSONObject toJson(){
+		JSONObject json = new JSONObject();
+		json.put("userName", userName);
+		json.put("pwd", pwd);
+		return json;
 	}
 
 
