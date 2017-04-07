@@ -38,6 +38,7 @@ public class UserConreoller {
 		} else {
 			try {
 				ur.insert(u);
+				r = "666";
 			} catch (Exception e2) {
 				e2.printStackTrace();
 				Throwable cause = e2.getCause();
@@ -73,7 +74,7 @@ public class UserConreoller {
 			out.print(r);
 		} else {
 			// u=ur.findByUserName(u).get(0);
-			out.print(ur.findByUserName(u));
+			out.print(ur.findByUser(u));
 		}
 	}
 

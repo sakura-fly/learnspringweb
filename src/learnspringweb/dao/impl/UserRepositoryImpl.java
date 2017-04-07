@@ -16,8 +16,13 @@ public class UserRepositoryImpl implements UserOperations{
 	@Autowired
 	private MongoOperations mongo;
 
+//	@Override
+//	public List<User> findByUserName(User u) {
+//		return mongo.find(Query.query(Criteria.where("userName").is(u.getUserName()).and("pwd").is(u.getPwd())), User.class);
+//	}
+
 	@Override
-	public List<User> findByUserName(User u) {
+	public List<User> findByUser(User u) {
 		return mongo.find(Query.query(Criteria.where("userName").is(u.getUserName()).and("pwd").is(u.getPwd())), User.class);
 	}
 	
